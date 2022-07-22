@@ -20,11 +20,7 @@ jobs:
       # remove this step entirely if your site is pre-built
       - name: Install and Build
         run: |
-          pip3 install -r aaa/deps/pip/prod.pip
-          mkdir -p static
-          mkdir -p public
-          python3 manage.py collectstatic --noinput --settings aaa.settings.prod --ignore admin
-          python3 manage.py distill-local --force --settings aaa.settings.prod
+          python3 builds.py
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4

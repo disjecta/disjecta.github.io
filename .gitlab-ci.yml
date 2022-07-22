@@ -4,17 +4,11 @@
 # https://pythonspeed.com/articles/alpine-docker-python/
 image: python:3.11-rc-bullseye
 
-#-----------------------------------------------------------
+# ----------------------------------------------------------
 pages:
   stage: deploy
   script:
-  # - apt-get install make git
-  pip3 install -r aaa/deps/pip/prod.pip
-  # - make
-  - mkdir -p static
-  - mkdir -p public
-  - python3 manage.py collectstatic --noinput --settings aaa.settings.prod --ignore admin
-  - python3 manage.py distill-local --force --settings aaa.settings.prod
+  - python3 builds.py
   artifacts:
     paths:
     - public/
