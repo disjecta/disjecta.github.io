@@ -14,6 +14,6 @@ updates:
 version: 2
 updates:
   - package-ecosystem: "pip"
-    directory: "aaa_proj/deps/pip_dependabot"
+    directory: "aaa/deps/pip_dependabot"
     schedule:
       interval: "daily"
