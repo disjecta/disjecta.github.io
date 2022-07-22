@@ -1,0 +1,4 @@
+django==4.0.6
+
+django-distill==2.10.2
+django-cachekiller==0.8.1

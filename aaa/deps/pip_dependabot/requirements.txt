@@ -1,0 +1,22 @@
+# This file is specifcally for working with the limitations
+# of dependabot, without using additional tools such as
+# poetry, pipenv, pdm, et al., and without clashing with
+# files expected by, e.g., Heroku
+
+# ----------------------------------------------------------
+# BASE DEPENDENCIES, ALL ENVIRONMENTS
+# ----------------------------------------------------------
+django==4.0.6
+
+django-distill==2.10.2
+django-cachekiller==0.8.1
+
+# ----------------------------------------------------------
+# DEV-ONLY DEPENDENCIES
+# ----------------------------------------------------------
+django-non-dark-admin==2.0.2
+
+# ----------------------------------------------------------
+# EXTRA BUILD-ONLY / PRODUCTION-ONLY DEPENDENCIES
+# ----------------------------------------------------------
+# none at this time
