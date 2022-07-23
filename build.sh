@@ -1,8 +1,12 @@
 #!/bin/bash
 
+# ----------------------------------------------------------
+
 function __sepr () {
     printf '# ----------------------------------------------------------\n'
 }
+
+# ----------------------------------------------------------
 
 function __diagnostics () {
 
@@ -48,13 +52,14 @@ function __diagnostics () {
     pip list
 }
 
-__diagnostics
+# ----------------------------------------------------------
+# uncomment this function call as desired
+# __diagnostics
+
+# ----------------------------------------------------------
 
 __sepr
-pip install -r aaa/deps/pip/prod.pip
-
-# __sepr
-# python manage.py check
+pip install -r deps/pip/prod.pip
 
 __sepr
 mkdir -pv public_collect_static
