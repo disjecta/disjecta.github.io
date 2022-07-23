@@ -19,4 +19,4 @@ django-non-dark-admin==2.0.2
 # ----------------------------------------------------------
 # EXTRA BUILD-ONLY / PRODUCTION-ONLY DEPENDENCIES
 # ----------------------------------------------------------
-# none at this time
+django-htmlmin==0.11.0
