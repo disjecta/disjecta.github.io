@@ -2,8 +2,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Some Demo Blog - {% block title %}{% endblock %}</title>
+        <title>{% block title %}{% endblock %}&nbsp;&#183;&nbsp;{{ SITE_TITLE }}{% if SITE_HEAD_TITLE_ENV %}&nbsp;[{{ SITE_HEAD_TITLE_ENV }}]{% endif %}</title>
+        <meta name="title" content="{% block title_meta %}{% endblock %}&nbsp;&#183;&nbsp;{{ SITE_TITLE }}">
+
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
         <link rel="stylesheet" href="{% cdnstatic 'styles/tachyons.min.css' %}'">
         <link rel="stylesheet" href="{% cdnstatic 'styles/blog.css' %}'">
     </head>

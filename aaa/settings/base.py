@@ -2,6 +2,7 @@ import os
 
 from .inc.middleware import *  # noqa
 
+SITE_TITLE = 'Disjecta'
 
 BASE_DIR = \
     os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -36,6 +37,7 @@ TEMPLATES = [
                 # project custom context processors
                 "aaa.context_processors.dynamic_build_time",
                 "aaa.context_processors.dynamic_platform_info",
+                "aaa.context_processors.from_settings",
             ],
         },
     },

@@ -1,4 +1,4 @@
-# from django.conf import settings
+from django.conf import settings
 from django.utils import timezone as aware
 
 # for version info on status page
@@ -52,4 +52,10 @@ def dynamic_platform_info(request):
         # django-cachekiller ?
         "DJANGO_HTMLMIN_VERSION_IMPORTLIB": htmlmin.__version__,
         "OS_VERSION": OS_VERSION,
+    }
+
+def from_settings(request):
+    return {
+        'SITE_TITLE': getattr(settings, 'SITE_TITLE', None),
+        'SITE_HEAD_TITLE_ENV': getattr(settings, 'SITE_HEAD_TITLE_ENV', None),
     }
