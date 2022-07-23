@@ -30,6 +30,10 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                # project custom context processors
+                "aaa.context_processors.dynamic_build_time",
+                "aaa.context_processors.dynamic_platform_info",
             ],
         },
     },

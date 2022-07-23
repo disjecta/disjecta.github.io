@@ -3,5 +3,25 @@
 {% block title %}{{ post.title }}{% endblock %}
 
 {% block content %}
-    This page is a stub.
+    <p>
+        <strong>Site last built:</strong> {{ CURRENT_AWARE_DATETIME }}
+    </p>
+
+    <h2>Platform Information</h2>
+    
+    <ul>
+        <li>Python: {{ PYTHON_VERSION_PLATFORM }}</li>
+
+        <li>Pip: {{ PIP_VERSION_IMPORTLIB }}</li>
+        <li>Django: {{ DJANGO_VERSION_IMPORTLIB }}</li>
+        <li>Django Distill: {{ DISTILL_VERSION_IMPORTLIB }}</li>
+        
+        <li>OS: {{ OS_VERSION }}</li>
+
+        {% comment "" %}
+        <li> {{  }}</li>
+        <li> {{  }}</li>
+        {% endcomment %}
+    </ul>
+
 {% endblock %}
