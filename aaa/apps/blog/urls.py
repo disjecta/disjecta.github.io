@@ -42,7 +42,7 @@ urlpatterns = [
                  name='blog-tag',
                  distill_func=get_tags),
 
-    distill_path('status',
+    distill_path('status/',
                  TemplateView.as_view(
                     template_name='status.html'
                  ),
