@@ -1,5 +1,5 @@
 INSTALLED_APPS = [
-    'aaa.apps.blog',
+    'apps.blog',
 
     'django.contrib.admin',
     'django.contrib.auth',

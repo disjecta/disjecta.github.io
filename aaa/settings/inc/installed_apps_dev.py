@@ -1,5 +1,5 @@
 INSTALLED_APPS = [
-    'aaa.apps.blog',
+    'apps.blog',
 
     'django_non_dark_admin', # not in prod
 
