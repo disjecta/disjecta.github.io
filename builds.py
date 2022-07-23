@@ -15,7 +15,7 @@ try:
 except FileExistsError:
     print(f"Directory '{distill_dir}' already exists")
 
-os.system('pip3 install -r aaa/deps/pip/prod.pip')
+os.system('pip install -r aaa/deps/pip/prod.pip')
 
 os.system('python3 manage.py collectstatic --noinput \
     --settings aaa.settings.prod \
