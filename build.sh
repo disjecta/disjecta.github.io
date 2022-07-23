@@ -13,12 +13,19 @@ bash --version
 __sepr
 which python
 which python3
+
+__sepr
 which pip
 which pip3
+
+__sepr
 which pipenv
 
 __sepr
 python -V
+
+__sepr
+python3 -V
 
 __sepr
 pip -V
@@ -26,6 +33,9 @@ pip -V
 __sepr
 mkdir -pv public_collect_static
 mkdir -pv public
+
+__sepr
+pip install --upgrade pip
 
 __sepr
 pip list
