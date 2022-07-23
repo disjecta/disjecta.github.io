@@ -3,12 +3,12 @@
     <a class="link dim gray f6 f5-ns dib mr3" href="{% url 'blog-index' %}" title="Blog">Blog</a>
 
     <a class="link dim gray f6 f5-ns dib mr3" href="{% url 'status' %}" title="Status">Status</a>
-
-    {% if DEBUG %}
+    
+    {% comment "" %}{% if DEBUG %}{% endcomment %}
     {# note that the Admin app is not distilled #}
     {% if user.is_authenticated %}{% if request.user.is_superuser %}
         <a class="link dim gray f6 f5-ns dib mr3" href="{% url 'admin:index' %}" title="Admin">Admin</a>
     {% endif %}{% endif %} {# end Admin #}
-    {% endif %} {# end DEBUG #}
+    {% comment "" %}{% endif %} {# end DEBUG #}{% endcomment %}
 
 </nav>
