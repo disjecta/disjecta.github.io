@@ -1,7 +1,10 @@
+# from django.conf import settings
+from django.utils import timezone as aware
+
+# for version info on status page
 import platform, subprocess
 from importlib.metadata import version
-from django.utils import timezone as aware
-# from django.conf import settings
+import htmlmin # for version
 
 
 def dynamic_build_time(request):
@@ -32,12 +35,10 @@ def dynamic_platform_info(request):
         # https://itsmycode.com/how-to-check-and-print-python-version/
         # https://stackoverflow.com/questions/20180543/how-to-check-the-version-of-python-modules
         "PYTHON_VERSION_PLATFORM": platform.python_version(),
-        
         "PIP_VERSION_IMPORTLIB":  version("pip"),
-
         "DJANGO_VERSION_IMPORTLIB": version("django"),
         "DISTILL_VERSION_IMPORTLIB": version("django_distill"),
         # django-cachekiller ?
-
+        "DJANGO_HTMLMIN_VERSION_IMPORTLIB": htmlmin.__version__,
         "OS_VERSION": OS_VERSION,
     }

@@ -1,5 +1,7 @@
 import os
 
+from .inc.middleware import *  # noqa
+
 
 BASE_DIR = \
     os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -71,3 +73,5 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'public_collect_static')
 
 DISTILL_DIR = os.path.join(BASE_DIR, 'public')
+
+HTML_MINIFY = True

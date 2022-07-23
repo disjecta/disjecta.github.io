@@ -2,3 +2,5 @@ django==4.0.6
 
 django-distill==2.10.2  # https://github.com/meeb/django-distill
 django-cachekiller==0.8.1
+
+django-htmlmin==0.11.0  # https://github.com/cobrateam/django-htmlmin
