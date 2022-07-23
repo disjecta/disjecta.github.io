@@ -7,7 +7,16 @@ function __sepr () {
 function __diagnostics () {
 
     __sepr
+    which lsb_release
+
+    __sepr
     cat /etc/os-release
+
+    __sepr
+    cat /etc/issue
+
+    __sepr
+    hostnamectl
 
     __sepr
     bash --version

@@ -20,12 +20,23 @@ def dynamic_platform_info(request):
 
     # https://linuxhint.com/python-subprocess-check_output-method/
 
-    os_ver_cmd = 'lsb_release -drcs | tr -d \'"\''
-    lsb_status, lsb_result = subprocess.getstatusoutput(os_ver_cmd)
+    # https://superuser.com/questions/148851/python-check-existence-of-shell-command-before-execution
+
+    # https://unix.stackexchange.com/questions/676370/store-a-value-from-os-release-text-file-after-an-sign-individually
+
+    lsb_cmd = 'lsb_release -drcs | tr -d \'"\''
+    lsb_status, lsb_result = subprocess.getstatusoutput(lsb_cmd)
+
+    osr_cmd = '( . /etc/os-release && printf \'%s\n\' "$PRETTY_NAME" )'
+    osr_status, osr_result = subprocess.getstatusoutput(osr_cmd)
 
     if lsb_status == 0:
         OS_VERSION = subprocess.check_output('\
             lsb_release -drcs | tr -d \'"\'', \
+                shell=True, universal_newlines = True)
+    elif osr_status == 0:
+        OS_VERSION = subprocess.check_output('\
+            ( . /etc/os-release && printf \'%s\n\' "$PRETTY_NAME" )', \
                 shell=True, universal_newlines = True)
     else:
         OS_VERSION = ''
