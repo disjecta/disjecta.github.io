@@ -3,6 +3,7 @@
 # ----------------------------------------------------------
 
 00_IGNORE/
+reboot.sh
 public/
 public_collect_static/
 
