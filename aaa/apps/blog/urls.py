@@ -1,6 +1,9 @@
 from django_distill import distill_path
-from .views import IndexView, PostView, TagView
+
+from .views import IndexView, PostView, TagView, StatusView
 from .models import Post, Tag
+
+from django.views.generic import TemplateView
 
 
 def get_index():
@@ -15,6 +18,10 @@ def get_posts():
 def get_tags():
     for tag in Tag.objects.all():
         yield {'tag': tag.name}
+
+
+def get_status():
+    return None
 
 
 urlpatterns = [
@@ -34,5 +41,12 @@ urlpatterns = [
                  TagView.as_view(),
                  name='blog-tag',
                  distill_func=get_tags),
+
+    distill_path('status',
+                 TemplateView.as_view(
+                    template_name='status.html'
+                 ),
+                 name='status',
+                 distill_func=get_status),
 
 ]

@@ -25,3 +25,8 @@ class TagView(DetailView):
     model = Tag
     slug_url_kwarg = 'tag'
     slug_field = 'name'
+
+
+class StatusView(DetailView):
+
+    template_name = 'status.html'
