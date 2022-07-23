@@ -13,9 +13,9 @@ def dynamic_build_time(request):
     }
 
 
-
-
 def dynamic_platform_info(request):
+
+    # https://linuxhint.com/python-subprocess-check_output-method/
 
     os_ver_cmd = 'lsb_release -drcs | tr -d \'"\''
     lsb_status, lsb_result = subprocess.getstatusoutput(os_ver_cmd)

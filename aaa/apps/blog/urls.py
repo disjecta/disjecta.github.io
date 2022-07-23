@@ -42,6 +42,8 @@ urlpatterns = [
                  name='blog-tag',
                  distill_func=get_tags),
 
+    # note: GitLab Pages works without the trailing slash,
+    # but GitHub Pages does not
     distill_path('status/',
                  TemplateView.as_view(
                     template_name='status.html'
