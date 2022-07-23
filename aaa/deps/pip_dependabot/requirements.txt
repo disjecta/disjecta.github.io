@@ -8,15 +8,15 @@
 # ----------------------------------------------------------
 django==4.0.6
 
-django-distill==2.10.2
+django-distill==2.10.2  # https://github.com/meeb/django-distill
 django-cachekiller==0.8.1
 
 # ----------------------------------------------------------
 # DEV-ONLY DEPENDENCIES
 # ----------------------------------------------------------
-django-non-dark-admin==2.0.2
+django-non-dark-admin==2.0.2  # https://github.com/DOOMer/django-non-dark-admin
 
 # ----------------------------------------------------------
 # EXTRA BUILD-ONLY / PRODUCTION-ONLY DEPENDENCIES
 # ----------------------------------------------------------
-django-htmlmin==0.11.0
+django-htmlmin==0.11.0  # https://github.com/cobrateam/django-htmlmin

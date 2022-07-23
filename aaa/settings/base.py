@@ -1,6 +1,5 @@
 import os
 
-from .inc.middleware import *  # noqa
 
 BASE_DIR = \
     os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
