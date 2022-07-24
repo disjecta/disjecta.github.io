@@ -54,7 +54,7 @@ function __diagnostics () {
 
 # ----------------------------------------------------------
 # uncomment this function call as desired
-# __diagnostics
+__diagnostics
 
 # ----------------------------------------------------------
 
