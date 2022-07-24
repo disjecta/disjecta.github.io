@@ -8,10 +8,6 @@ BASE_DIR = \
     os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 SECRET_KEY = 'some-secret-key'
-DEBUG = True
-
-
-ALLOWED_HOSTS = []
 
 # inst
 # middleware
@@ -75,5 +71,3 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'public_collect_static')
 
 DISTILL_DIR = os.path.join(BASE_DIR, 'public')
-
-HTML_MINIFY = True
