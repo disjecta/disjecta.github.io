@@ -69,6 +69,6 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'public_collect_static')
+STATIC_ROOT = os.path.join(BASE_DIR, '../public_collect_static')
 
-DISTILL_DIR = os.path.join(BASE_DIR, 'public')
+DISTILL_DIR = os.path.join(BASE_DIR, '../public')
