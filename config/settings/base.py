@@ -15,7 +15,7 @@ SECRET_KEY = 'some-secret-key'
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 
-ROOT_URLCONF = 'config.urls_root'
+ROOT_URLCONF = 'config.urls.root'  # allow for partials
 
 
 TEMPLATES = [
