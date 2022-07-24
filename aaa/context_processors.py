@@ -30,16 +30,16 @@ def dynamic_platform_info(request):
     osr_cmd = '( . /etc/os-release && printf \'%s\n\' "$PRETTY_NAME" )'
     osr_status, osr_result = subprocess.getstatusoutput(osr_cmd)
 
-    if lsb_status == 0:
+    result_fail = 'command not found'
+
+    if lsb_status == 0 and lsb_result.find(result_fail) == -1:
         OS_VERSION = subprocess.check_output('\
             lsb_release -drcs | tr -d \'"\'', \
                 shell=True, universal_newlines = True)
-    elif osr_status == 0:
+    elif osr_status == 0 and osr_result.find(result_fail) == -1:
         OS_VERSION = subprocess.check_output('\
             ( . /etc/os-release && printf \'%s\n\' "$PRETTY_NAME" )', \
                 shell=True, universal_newlines = True)
-    else:
-        OS_VERSION = ''
 
     return {
         # https://note.nkmk.me/en/python-sys-platform-version-info/
