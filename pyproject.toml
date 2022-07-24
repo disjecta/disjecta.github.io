@@ -1,0 +1,21 @@
+[project]
+name = ""
+version = ""
+description = ""
+authors = [
+    {name = "Venteto", email = ""},
+]
+dependencies = [
+    "django>=4.0.6",
+    "django-distill>=3.0.0",
+    "django-cachekiller>=0.8.1",
+    "django-htmlmin>=0.11.0",
+]
+requires-python = ">=3.8"
+license = {text = "MIT"}
+
+[tool.pdm]
+
+[build-system]
+requires = ["pdm-pep517>=1.0.0"]
+build-backend = "pdm.pep517.api"

@@ -14,6 +14,6 @@ updates:
 version: 2
 updates:
   - package-ecosystem: "pip"
-    directory: "deps/pip_dependabot"
+    directory: "/"
     schedule:
       interval: "daily"

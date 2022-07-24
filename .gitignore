@@ -2,6 +2,7 @@
 # SPECIFIC VARIANCES
 # ----------------------------------------------------------
 
+.pdm.toml
 public/
 public_collect_static/
 

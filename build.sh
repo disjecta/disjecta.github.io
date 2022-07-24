@@ -59,7 +59,7 @@ __diagnostics
 # ----------------------------------------------------------
 
 __sepr
-pip install -r deps/pip/prod.pip
+pip install -r requirements.txt
 
 __sepr
 mkdir -pv public_collect_static
