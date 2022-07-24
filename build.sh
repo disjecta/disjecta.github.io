@@ -67,10 +67,10 @@ mkdir -pv public
 
 __sepr
 python3 manage.py collectstatic --noinput \
-    --settings aaa.settings.prod \
+    --settings config.settings.prod \
     --ignore admin \
     --ignore django_non_dark_admin
 
 __sepr
 python3 manage.py distill-local --force \
-    --settings aaa.settings.prod
+    --settings config.settings.prod

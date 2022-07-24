@@ -19,7 +19,7 @@ ALLOWED_HOSTS = []
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 
-ROOT_URLCONF = 'aaa.urls_root'
+ROOT_URLCONF = 'config.urls_root'
 
 
 TEMPLATES = [
@@ -35,22 +35,22 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
 
                 # project custom context processors
-                "aaa.context_processors.dynamic_build_time",
-                "aaa.context_processors.dynamic_platform_info",
-                "aaa.context_processors.from_settings",
+                "config.context_processors.dynamic_build_time",
+                "config.context_processors.dynamic_platform_info",
+                "config.context_processors.from_settings",
             ],
         },
     },
 ]
 
 
-WSGI_APPLICATION = 'aaa.wsgi.application'
+WSGI_APPLICATION = 'config.wsgi.application'
 
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'aaa/data/rels.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'data/rels.sqlite3'),
     }
 }
 
