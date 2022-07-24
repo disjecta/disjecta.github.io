@@ -1,0 +1,7 @@
+{% extends 'foundation/base.html' %}
+
+{% block title %}{{ post.title }}{% endblock %}
+
+{% block content %}
+    {% include 'blog/_post.html' with post=post %}
+{% endblock %}

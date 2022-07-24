@@ -5,7 +5,7 @@ from .models import Post, Tag
 
 class IndexView(ListView):
 
-    template_name = 'index.html'
+    template_name = 'blog/index.html'
     model = Post
     allow_empty = False
     queryset = Post.objects.published()
@@ -15,18 +15,13 @@ class IndexView(ListView):
 
 class PostView(DetailView):
 
-    template_name = 'post.html'
+    template_name = 'blog/post.html'
     model = Post
 
 
 class TagView(DetailView):
 
-    template_name = 'tag.html'
+    template_name = 'blog/tag.html'
     model = Tag
     slug_url_kwarg = 'tag'
     slug_field = 'name'
-
-
-class StatusView(DetailView):
-
-    template_name = 'status.html'

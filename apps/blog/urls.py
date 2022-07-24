@@ -1,6 +1,6 @@
 from django_distill import distill_path
 
-from .views import IndexView, PostView, TagView, StatusView
+from .views import IndexView, PostView, TagView
 from .models import Post, Tag
 
 from django.views.generic import TemplateView
@@ -20,10 +20,6 @@ def get_tags():
         yield {'tag': tag.name}
 
 
-def get_status():
-    return None
-
-
 urlpatterns = [
 
     distill_path('',
@@ -41,14 +37,5 @@ urlpatterns = [
                  TagView.as_view(),
                  name='blog-tag',
                  distill_func=get_tags),
-
-    # note: GitLab Pages works without the trailing slash,
-    # but GitHub Pages does not
-    distill_path('status/',
-                 TemplateView.as_view(
-                    template_name='status.html'
-                 ),
-                 name='status',
-                 distill_func=get_status),
 
 ]
