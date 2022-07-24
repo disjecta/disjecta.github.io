@@ -31,9 +31,10 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
 
                 # project custom context processors
-                "config.context_processors.dynamic_build_time",
-                "config.context_processors.dynamic_platform_info",
-                "config.context_processors.from_settings",
+                "config.context_processors.dependency_reporting.get_dep_versions",
+                "config.context_processors.os_detection.get_os",
+                "config.context_processors.settings_injection.get_settings",
+                "config.context_processors.timestamp_creation.get_build_time",
             ],
         },
     },

@@ -1,24 +1,7 @@
-from django.conf import settings
-from django.utils import timezone as aware
-
-# for version info on status page
-import platform, subprocess
-from importlib.metadata import version
-import htmlmin # for version
+import subprocess
 
 
-def dynamic_build_time(request):
-    return {
-        # https://docs.djangoproject.com/en/stable/topics/i18n/timezones/
-
-        # https://strftime.org/
-
-        "CURRENT_AWARE_DATETIME": aware.now().strftime("%a %d %b %Y at \
-            %H:%M:%S %Z %z (%s Unix)"),
-    }
-
-
-def dynamic_platform_info(request):
+def get_os(request):
 
     """
     https://linuxhint.com/python-subprocess-check_output-method/
@@ -50,27 +33,5 @@ def dynamic_platform_info(request):
             universal_newlines = True)
 
     return {
-        # https://note.nkmk.me/en/python-sys-platform-version-info/
-
-        # https://itsmycode.com/how-to-check-and-print-python-version/
-
-        # https://stackoverflow.com/questions/20180543/how-to-check-the-version-of-python-modules
-
-        "PYTHON_VERSION": platform.python_version(),
-
-        "PIP_VERSION":  version("pip"),
-        "DJANGO_VERSION": version("django"),
-        "DISTILL_VERSION": version("django_distill"),
-
-        "HTMLMIN_VERSION": htmlmin.__version__,
-
         "OS_VERSION": OS_VERSION,
-
-        # django-cachekiller? compressor? django-bakery?
-    }
-
-def from_settings(request):
-    return {
-        'SITE_TITLE': getattr(settings, 'SITE_TITLE', None),
-        'SITE_HEAD_TITLE_ENV': getattr(settings, 'SITE_HEAD_TITLE_ENV', None),
     }
