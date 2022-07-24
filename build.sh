@@ -66,11 +66,13 @@ mkdir -pv public_collect_static
 mkdir -pv public
 
 __sepr
-python3 manage.py collectstatic --noinput \
+python3 project_root/manage.py collectstatic \
+    --noinput \
     --settings config.settings.prod \
     --ignore admin \
     --ignore django_non_dark_admin
 
 __sepr
-python3 manage.py distill-local --force \
+python3 project_root/manage.py distill-local \
+    --force \
     --settings config.settings.prod
