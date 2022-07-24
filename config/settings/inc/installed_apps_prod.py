@@ -1,5 +1,5 @@
 INSTALLED_APPS = [
-    'apps.foundation',
+    'apps.a0_foundation',
     'apps.blog',
 
     'django.contrib.admin',

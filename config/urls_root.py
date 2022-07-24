@@ -6,7 +6,7 @@ urlpatterns = [
     # ------------------------------------------------------
     # APPS
     # ------------------------------------------------------
-    path('', include('apps.foundation.urls')),
+    path('', include('apps.a0_foundation.urls')),
 
     path('', include('apps.blog.urls')),
 
