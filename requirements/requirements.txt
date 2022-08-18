@@ -16,8 +16,8 @@ django==4.0.6 \
     --hash=sha256:ca54ebedfcbc60d191391efbf02ba68fb52165b8bf6ccd6fe71f098cac1fe59e
 django-cachekiller==0.8.1 \
     --hash=sha256:1e87758f226dc27660d3dfca414851da4b88d4a80f45d00002c5600e56a36aaf
-django-distill==3.0.0 \
-    --hash=sha256:87204cdc1951cae57758be9465b6a35d368e1d87f5a94adafe9e499e3fce3edd
+django-distill==3.0.1 \
+    --hash=sha256:8bbac5e45d2afc61cc718d587c6026267c985305f5e599465f2ebc4b0cba9ebf
 django-htmlmin==0.11.0 \
     --hash=sha256:e41b2a2157570846645cc636a9bddde8aa3e03f6834a9211e61a17f2ed42b87e
 html5lib==1.1 \
