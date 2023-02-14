@@ -11,9 +11,9 @@ certifi==2022.6.15 \
 charset-normalizer==2.1.0 \
     --hash=sha256:5189b6f22b01957427f35b6a08d9a0bc45b46d3788ef5a92e978433c7a35f8a5 \
     --hash=sha256:575e708016ff3a5e3681541cb9d79312c416835686d054a23accb873b254f413
-django==4.0.6 \
-    --hash=sha256:a67a793ff6827fd373555537dca0da293a63a316fe34cb7f367f898ccca3c3ae \
-    --hash=sha256:ca54ebedfcbc60d191391efbf02ba68fb52165b8bf6ccd6fe71f098cac1fe59e
+django==4.1.7 \
+    --hash=sha256:44f714b81c5f190d9d2ddad01a532fe502fa01c4cb8faf1d081f4264ed15dcd8 \
+    --hash=sha256:f2f431e75adc40039ace496ad3b9f17227022e8b11566f4b363da44c7e44761e
 django-cachekiller==0.8.1 \
     --hash=sha256:1e87758f226dc27660d3dfca414851da4b88d4a80f45d00002c5600e56a36aaf
 django-distill==3.0.0 \
